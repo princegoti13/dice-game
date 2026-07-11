@@ -1,0 +1,36 @@
+name: Auto Deploy Dice Game
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd ~/dice-game
+
+            git pull origin main
+
+            sudo docker build -t dice-game .
+
+            sudo docker stop dice-game || true
+
+            sudo docker rm dice-game || true
+
+            sudo docker run -d \
+              --name dice-game \
+              -p 9091:80 \
+              dice-game

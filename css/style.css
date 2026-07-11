@@ -460,3 +460,76 @@ scale(1);
     font-size:20px;
 
 }
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width:768px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .history{
+
+        width:100%;
+
+        height:120px;
+
+        border-right:none;
+
+        border-bottom:1px solid rgba(255,255,255,.1);
+
+        padding:15px;
+
+    }
+
+    #historyList{
+
+        flex-direction:row;
+
+        overflow-x:auto;
+
+        gap:10px;
+
+    }
+
+    .item{
+
+        min-width:50px;
+
+        height:50px;
+
+    }
+
+    .game{
+
+        padding:20px;
+
+    }
+
+    .diceContainer{
+
+        gap:25px;
+
+    }
+
+    .dice{
+
+        width:120px;
+        height:120px;
+
+    }
+
+    .info{
+
+        font-size:14px;
+
+        letter-spacing:2px;
+
+        text-align:center;
+
+    }
+
+}

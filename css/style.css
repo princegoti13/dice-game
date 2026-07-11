@@ -461,74 +461,229 @@ scale(1);
 
 }
 
-/* ========================= */
-/* MOBILE */
-/* ========================= */
+/* ========================================= */
+/* TABLET (1024px) */
+/* ========================================= */
+
+@media (max-width:1024px){
+
+    .history{
+        width:200px;
+        padding:25px;
+    }
+
+    .history h1{
+        font-size:32px;
+    }
+
+    .dice{
+        width:150px;
+        height:150px;
+    }
+
+    .diceContainer{
+        gap:50px;
+    }
+
+}
+
+/* ========================================= */
+/* MOBILE (768px) */
+/* ========================================= */
 
 @media (max-width:768px){
 
+    body{
+        overflow:auto;
+    }
+
     .container{
         flex-direction:column;
+        height:auto;
+        min-height:100vh;
     }
+
+    /* History Top */
 
     .history{
 
         width:100%;
-
-        height:120px;
-
         border-right:none;
+        border-bottom:1px solid rgba(255,255,255,.15);
 
-        border-bottom:1px solid rgba(255,255,255,.1);
+        padding:20px;
 
-        padding:15px;
+    }
+
+    .history h1{
+
+        font-size:28px;
+        text-align:center;
+        margin-bottom:15px;
 
     }
 
     #historyList{
 
+        display:flex;
         flex-direction:row;
+        justify-content:center;
+        gap:12px;
 
         overflow-x:auto;
+        padding-bottom:5px;
 
-        gap:10px;
+        scrollbar-width:none;
 
+    }
+
+    #historyList::-webkit-scrollbar{
+        display:none;
     }
 
     .item{
 
-        min-width:50px;
+        min-width:55px;
+        height:55px;
 
-        height:50px;
+        font-size:22px;
+
+        flex-shrink:0;
 
     }
 
+    /* Game */
+
     .game{
 
-        padding:20px;
+        padding:30px 15px;
+
+        flex:1;
 
     }
 
     .diceContainer{
 
         gap:25px;
+        flex-wrap:wrap;
 
     }
 
     .dice{
 
-        width:120px;
-        height:120px;
+        width:130px;
+        height:130px;
+
+        border-radius:22px;
+
+    }
+
+    .dot{
+
+        width:15px;
+        height:15px;
 
     }
 
     .info{
+
+        margin-top:40px;
 
         font-size:14px;
 
         letter-spacing:2px;
 
         text-align:center;
+
+        line-height:1.6;
+
+    }
+
+}
+
+/* ========================================= */
+/* SMALL MOBILE (480px) */
+/* ========================================= */
+
+@media (max-width:480px){
+
+    .history{
+
+        padding:15px;
+
+    }
+
+    .history h1{
+
+        font-size:24px;
+
+    }
+
+    .item{
+
+        min-width:45px;
+        height:45px;
+
+        font-size:18px;
+
+    }
+
+    .dice{
+
+        width:105px;
+        height:105px;
+
+        border-radius:18px;
+
+        padding:15px;
+
+    }
+
+    .dot{
+
+        width:12px;
+        height:12px;
+
+    }
+
+    .diceContainer{
+
+        gap:18px;
+
+    }
+
+    .info{
+
+        font-size:12px;
+
+        letter-spacing:1px;
+
+    }
+
+}
+
+/* ========================================= */
+/* LARGE DESKTOP */
+/* ========================================= */
+
+@media (min-width:1600px){
+
+    .dice{
+
+        width:200px;
+        height:200px;
+
+    }
+
+    .diceContainer{
+
+        gap:100px;
+
+    }
+
+    .history{
+
+        width:280px;
 
     }
 

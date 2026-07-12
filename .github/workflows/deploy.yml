@@ -25,12 +25,9 @@ jobs:
             git fetch origin
             git reset --hard origin/main
 
-            deploy.sh
-
             sudo docker build -t dice-game .
 
             sudo docker stop dice-game || true
-
             sudo docker rm dice-game || true
 
             sudo docker run -d \

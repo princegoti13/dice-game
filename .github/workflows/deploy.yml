@@ -22,7 +22,10 @@ jobs:
           script: |
             cd ~/dice-game
 
-            git pull origin main
+            git fetch origin
+            git reset --hard origin/main
+
+            deploy.sh
 
             sudo docker build -t dice-game .
 

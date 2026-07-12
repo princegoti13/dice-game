@@ -1,0 +1,161 @@
+# 🎲 DiceX - Modern Dice Game
+
+A modern and responsive Dice Game built using **HTML, CSS, JavaScript, Docker, GitHub Actions, and AWS EC2**.
+
+The game features smooth animations, realistic dice faces, sound effects, history tracking, and automatic deployment using CI/CD.
+
+---
+
+## ✨ Features
+
+- 🎲 Interactive Dice Roll
+- 🎨 Modern Glassmorphism UI
+- 📱 Fully Responsive Design
+- 🔊 Dice Roll Sound Effect
+- 📜 Roll History Panel
+- ⚡ Smooth Animations
+- 🖱️ Click Anywhere to Roll
+- 🐳 Docker Support
+- ☁️ AWS EC2 Deployment
+- 🚀 GitHub Actions Auto Deploy
+
+---
+
+## 🛠️ Built With
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- Docker
+- Nginx
+- GitHub Actions
+- AWS EC2
+- Git
+
+---
+
+## 📂 Project Structure
+
+```text
+dice-game/
+│
+├── assets/
+│   └── sounds/
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+├── index.html
+├── Dockerfile
+├── README.md
+└── .github/
+    └── workflows/
+        └── deploy.yml
+```
+
+---
+
+## 🚀 Live Demo
+
+### Dice Game
+
+```
+http://13.201.60.178:9091
+```
+
+---
+
+## 🖥️ Local Setup
+
+Clone the repository
+
+```bash
+git clone https://github.com/princegoti13/dice-game.git
+```
+
+Go to project folder
+
+```bash
+cd dice-game
+```
+
+Run locally
+
+Just open
+
+```
+index.html
+```
+
+or use Live Server in VS Code.
+
+---
+
+## 🐳 Docker
+
+Build Image
+
+```bash
+docker build -t dice-game .
+```
+
+Run Container
+
+```bash
+docker run -d \
+--name dice-game \
+-p 9091:80 \
+dice-game
+```
+
+---
+
+## ☁️ Deployment
+
+The application is deployed on:
+
+- AWS EC2
+- Docker
+- Nginx
+
+Every push to the **main** branch automatically deploys the latest version using GitHub Actions.
+
+---
+
+## 📸 Preview
+
+Modern UI featuring:
+
+- Responsive Layout
+- Animated Dice
+- Roll History
+- Premium Glass Effect
+
+---
+
+## 👨‍💻 Developer
+
+**Prince Goti**
+
+BCA Student | Full Stack Web Developer | Cloud & DevOps Enthusiast
+
+GitHub
+
+https://github.com/princegoti13
+
+---
+
+## ⭐ Support
+
+If you like this project,
+
+⭐ Star this repository.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
